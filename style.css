@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.password-generator {
+  padding: 40px;
+
+  color: white;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.password-generator div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.password {
+  min-width: 280px;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.password p {
+  padding: 6px 10px;
+}
+
+.password i {
+  padding: 6px 10px;
+}
+
+.password-generator button {
+  background-color: #0a0a23;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+}
+
+.password-generator button:hover {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 2px #000;
+  transition: 0.2s;
+}
+
+.password-generator div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+input[type='number' i] {
+  border-radius: 20px;
+  text-align: center;
+}
