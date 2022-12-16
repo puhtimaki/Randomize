@@ -2,8 +2,10 @@
 
 // funktiot: symboli, numero, lowercase, uppercase,--------------
 // funktio: copy password
-// checkbox chekki - > alerttia jos ei mitään valittu
+// checkbox chekki - > alerttia jos ei mitään valittu ------
 // passwordin luonti  - > on click submit buttoniin
+
+//email sending function for username
 
 const keys = {
   upperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
