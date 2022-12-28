@@ -47,5 +47,32 @@ function createPassword() {
     return
   }
 
-  // PW logiikka
+  const passwordBox = document.getElementById('passwordBox')
+  const length = document.getElementById('length')
+  let password = ''
+  while (length.value > password.length) {
+    let keyToAdd = keys[Math.floor(Math.random() * keys.length)]
+    let isChecked = document.getElementById(keyToAdd.name).checked
+
+    if (isChecked) {
+      password += keyToAdd()
+    }
+  }
+
+  passwordBox.innerHTML = password
+}
+
+function copyPassword() {
+  const textarea = document.getElementById('textarea')
+  const password = document.getElementById('passwordBox').innerText
+
+  if (!password) {
+    return
+  }
+  textarea.value = password
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy')
+  textarea.remove()
+  alert('Password copied to clipboard')
 }
