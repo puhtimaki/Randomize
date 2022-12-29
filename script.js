@@ -27,13 +27,12 @@ const GetKey = [
 
   function lowerCase() {
     const lowerCase =
-      keys.upperCase[Math.floor(Math.random() * keys.lowerCase.length)]
+      keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]
     return lowerCase
   },
 
   function number() {
-    const number =
-      keys.upperCase[Math.floor(Math.random() * keys.number.length)]
+    const number = keys.number[Math.floor(Math.random() * keys.number.length)]
     return number
   },
 ]
