@@ -13,28 +13,30 @@ const keys = {
   number: '0123456789',
   symbol: '!@#$%^&*()_+~\\`|}{[]:;?><,./-=',
 }
+const GetKey = [
+  function symbol() {
+    const symbol = keys.symbol[Math.floor(Math.random() * keys.symbol.length)]
+    return symbol
+  },
 
-function symbol() {
-  const symbol = keys.symbol[Math.floor(Math.random() * keys.symbol.length)]
-  return symbol
-}
+  function upperCase() {
+    const upperCase =
+      keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]
+    return upperCase
+  },
 
-function upperCase() {
-  const upperCase =
-    keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]
-  return upperCase
-}
+  function lowerCase() {
+    const lowerCase =
+      keys.upperCase[Math.floor(Math.random() * keys.lowerCase.length)]
+    return lowerCase
+  },
 
-function lowerCase() {
-  const lowerCase =
-    keys.upperCase[Math.floor(Math.random() * keys.lowerCase.length)]
-  return lowerCase
-}
-
-function number() {
-  const number = keys.upperCase[Math.floor(Math.random() * keys.number.length)]
-  return number
-}
+  function number() {
+    const number =
+      keys.upperCase[Math.floor(Math.random() * keys.number.length)]
+    return number
+  },
+]
 
 function createPassword() {
   const numberchk = document.getElementById('number').checked
@@ -51,7 +53,7 @@ function createPassword() {
   const length = document.getElementById('length')
   let password = ''
   while (length.value > password.length) {
-    let keyToAdd = keys[Math.floor(Math.random() * keys.length)]
+    let keyToAdd = GetKey[Math.floor(Math.random() * GetKey.length)]
     let isChecked = document.getElementById(keyToAdd.name).checked
 
     if (isChecked) {
@@ -63,7 +65,7 @@ function createPassword() {
 }
 
 function copyPassword() {
-  const textarea = document.getElementById('textarea')
+  const textarea = document.createElement('textarea')
   const password = document.getElementById('passwordBox').innerText
 
   if (!password) {
