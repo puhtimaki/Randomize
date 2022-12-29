@@ -10,6 +10,7 @@
     <title>Randomizer</title>
   </head>
   <body>
+    
     <div class="container">
         <div class="password-generator">
           <h1>Randomize 📝</h1>
@@ -36,8 +37,16 @@
             <label for="upperCase">Include upperCase</label>
             <input type="checkbox" id="upperCase" checked>
           </div>
-          <button onclick="createPassword()">Generate</button>
+          <button class ="btnGenerate" onclick="createPassword()">Generate</button>
+          <button class = "btnEmail" onclick="SendEmail()">Send via email</button>
+          
+          
         </div>
       </div>
+      <script type = "text/javascript">
+        document.querySelector('.btnEmail').style.display = 'none'
+        document.querySelector('.btnGenerate').addEventListener('click', showEmail)
+        
+            </script>
   </body>
 </html>

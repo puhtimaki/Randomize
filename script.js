@@ -77,3 +77,18 @@ function copyPassword() {
   textarea.remove()
   alert('Password copied to clipboard')
 }
+
+function SendEmail() {
+  const link =
+    'mailto:juho.jokinen@wapice.com' +
+    '?cc=' +
+    '&subject=' +
+    encodeURIComponent('Randomize password') +
+    '&body=' +
+    encodeURIComponent(document.getElementById('passwordBox').innerHTML)
+  window.location.href = link
+}
+
+function showEmail() {
+  document.querySelector('.btnEmail').style.display = ''
+}
